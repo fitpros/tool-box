@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PixelPerfect - Complete Media Optimization Suite. Compress images, convert files, optimize videos, and enhance your digital content.">
+    <title>PixelPerfect - All-in-One Media Optimization Tools</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --background: #0f172a;
+            --text: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff 30%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 200px;
+            background: var(--glass);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tool-card {
+            background: var(--glass);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            position: relative;
+        }
+
+        /* Animated Background Elements */
+        .animated-blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(var(--primary), transparent);
+            filter: blur(100px);
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 100px); }
+            50% { transform: translate(-50px, 150px); }
+            75% { transform: translate(-100px, 50px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">PixelPerfect</div>
+            <div class="nav-links">
+                <a href="#tools">Tools</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="animated-blob" style="top: -100px; left: -200px;"></div>
+        <div class="animated-blob" style="bottom: -200px; right: -200px;"></div>
+        <h1>Transform Your Digital<br>Assets Perfectly</h1>
+        <p>Professional suite of media optimization tools for creators and developers</p>
+    </section>
+
+    <!-- Main Tools Grid -->
+    <<section class="tools-grid" id="tools">
+    <a href="/img-compress.html" class="tool-card">
+        <div class="tool-icon">🖼️</div>
+        <h3>Image Compressor</h3>
+        <p>Optimize JPG, PNG & WebP files with lossless compression</p>
+    </a>
+</section>
+
+        
+        <div class="tool-card">
+            <div class="tool-icon">📄</div>
+            <h3>PDF Converter</h3>
+            <p>Convert documents to PDF and vice versa with OCR support</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">🎞️</div>
+            <h3>Video Compressor</h3>
+            <p>Reduce video file sizes without quality loss</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">🎨</div>
+            <h3>Image Converter</h3>
+            <p>Convert between 20+ image formats instantly</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">🔒</div>
+            <h3>File Encryptor</h3>
+            <p>Secure your files with military-grade encryption</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">🔄</div>
+            <h3>Format Converter</h3>
+            <p>Convert between audio, video, and document formats</p>
+        </div>
+    </section>
+
+    <!-- Ad Unit -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Key Features -->
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h3>⚡ Instant Processing</h3>
+            <p>Leverage cloud-powered processing for lightning-fast conversions</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>🔒 Secure Storage</h3>
+            <p>All files automatically deleted 24 hours after processing</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📈 Advanced Analytics</h3>
+            <p>Detailed optimization reports and performance metrics</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps">
+        <div class="container">
+            <h2>Simple 3-Step Process</h2>
+            <div class="steps-grid">
+                <!-- Step cards similar to previous example -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <!-- FAQ items -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer content similar to previous example -->
+    </footer>
+
+    <script>
+        // Initialize AdSense
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+        // Add intersection observer for animation triggers
+        const animateOnScroll = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.tool-card, .feature-card').forEach(card => {
+                observer.observe(card);
+            });
+        };
+
+        window.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+</body>
+</html>
