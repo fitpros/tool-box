@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate File Converter | PDF, Images, Documents</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5721788035694701" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --secondary: #45a049;
+            --background: #f8f9fa;
+            --text: #2d3436;
+            --card-bg: #ffffff;
+            --border: #dfe6e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Enhanced Navigation */
+        .tool-nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            background: var(--card-bg);
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .tool-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+        }
+
+        .tool-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 6px rgba(76,175,80,0.2);
+        }
+
+        .tool-btn:hover:not(.active) {
+            background: #f1f1f1;
+        }
+
+        /* Unified Tool Section */
+        .tool-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Enhanced Drop Zone */
+        .drop-zone {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            background: var(--background);
+        }
+
+        .drop-zone:hover {
+            border-color: var(--primary);
+            background: rgba(76,175,80,0.03);
+        }
+
+        .drop-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(76,175,80,0.05);
+            transform: scale(1.02);
+        }
+
+        /* Modern Format Grid */
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 2rem 0;
+        }
+
+        .format-card {
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+        }
+
+        .format-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+
+        /* Progress Indicator */
+        .progress-bar {
+            height: 4px;
+            background: #eee;
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        /* Action Buttons */
+        .action-btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76,175,80,0.25);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .tool-btn {
+                flex: 1 1 45%;
+                justify-content: center;
+                padding: 12px;
+            }
+
+            .tool-section {
+                padding: 1.5rem;
+            }
+
+            .drop-zone {
+                padding: 2rem 1rem;
+            }
+
+            .format-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tool-btn {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Ad -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5721788035694701"
+                 data-ad-slot="HEADER_SLOT"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+        <h1 style="text-align: center; margin: 2rem 0; color: var(--primary);">
+            Ultimate File Converter
+        </h1>
+        
+        <!-- Enhanced Tool Navigation -->
+        <nav class="tool-nav">
+            <button class="tool-btn active" data-tool="pdf">
+                📄 PDF Tools
+            </button>
+            <button class="tool-btn" data-tool="image">
+                🖼️ Image Tools
+            </button>
+            <button class="tool-btn" data-tool="document">
+                📑 Document Tools
+            </button>
+            <button class="tool-btn" data-tool="merge">
+                🔗 Merge Files
+            </button>
+            <button class="tool-btn" data-tool="compress">
+                🗜️ Compress Files
+            </button>
+        </nav>
+
+        <!-- PDF Tools Section -->
+        <section class="tool-section active" id="pdfTool">
+            <h2 style="margin-bottom: 1.5rem;">PDF Conversion Tools</h2>
+            
+            <div class="format-grid">
+                <div class="format-card" data-conversion="pdf-to-word">
+                    <h3>📝 PDF to Word</h3>
+                    <p>.docx conversion</p>
+                </div>
+                <div class="format-card" data-conversion="word-to-pdf">
+                    <h3>📄 Word to PDF</h3>
+                    <p>.doc/.docx to PDF</p>
+                </div>
+                <div class="format-card" data-conversion="pdf-to-jpg">
+                    <h3>🖼️ PDF to Images</h3>
+                    <p>JPG/PNG output</p>
+                </div>
+                <div class="format-card" data-conversion="jpg-to-pdf">
+                    <h3>📁 Images to PDF</h3>
+                    <p>JPG/PNG to PDF</p>
+                </div>
+            </div>
+
+            <div class="drop-zone" id="pdfDropZone">
+                <input type="file" id="pdfInput" hidden accept=".pdf,.doc,.docx,.jpg,.png">
+                <p>📤 Drag & drop files or click to upload</p>
+                <small>Max file size: 50MB</small>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="pdfProgress"></div>
+            </div>
+
+            <button class="action-btn" id="pdfConvertBtn">
+                🚀 Convert Now
+            </button>
+        </section>
+
+        <!-- Other tool sections follow similar structure -->
+
+        <!-- Mid-page Ad -->
+        <div class="ad-container" style="margin: 3rem 0;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5721788035694701"
+                 data-ad-slot="MID_SLOT"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Navigation Logic
+        document.querySelectorAll('.tool-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                document.querySelectorAll('.tool-btn, .tool-section')
+                       .forEach(el => el.classList.remove('active'));
+                
+                // Add active class to clicked
+                btn.classList.add('active');
+                document.getElementById(`${btn.dataset.tool}Tool`)
+                     .classList.add('active');
+            });
+        });
+
+        // Drag & Drop Handling
+        const setupDropZone = (zone, input) => {
+            zone.addEventListener('dragover', e => {
+                e.preventDefault();
+                zone.classList.add('dragover');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('dragover');
+            });
+
+            zone.addEventListener('drop', e => {
+                e.preventDefault();
+                zone.classList.remove('dragover');
+                input.files = e.dataTransfer.files;
+                handleFileSelection(input.files);
+            });
+
+            zone.addEventListener('click', () => input.click());
+        };
+
+        // Initialize all drop zones
+        const pdfDropZone = document.getElementById('pdfDropZone');
+        const pdfInput = document.getElementById('pdfInput');
+        setupDropZone(pdfDropZone, pdfInput);
+
+        // File Handling
+        const handleFileSelection = (files) => {
+            if (files.length > 0) {
+                // Show preview and enable conversion
+                document.getElementById('pdfConvertBtn').disabled = false;
+                // Simulate conversion progress
+                simulateConversion();
+            }
+        };
+
+        const simulateConversion = () => {
+            let progress = 0;
+            const progressBar = document.getElementById('pdfProgress');
+            const interval = setInterval(() => {
+                progress += 10;
+                progressBar.style.width = `${progress}%`;
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showDownloadButton();
+                }
+            }, 300);
+        };
+
+        const showDownloadButton = () => {
+            const btn = document.getElementById('pdfConvertBtn');
+            btn.innerHTML = '⬇️ Download Converted File';
+            btn.onclick = () => alert('Download started!');
+        };
+
+        // Initialize AdSense
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
